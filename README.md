@@ -1,9 +1,6 @@
 __IPv4 Public IP__ : 100.26.252.213
 
 
-pycodestyle 100% done!
-
-End! clone on May 27, 2020
 
 # Deploying a Flask API
 
