@@ -3,5 +3,3 @@ flask
 gunicorn
 pytest
 psycopg2
-# or 
-# pip3 freeze > requirements.txt

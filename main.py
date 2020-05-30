@@ -1,3 +1,4 @@
+
 """
 A simple app to create a JWT token.
 """
@@ -97,9 +98,11 @@ def decode_jwt():
         abort(401)
 
 
-    response = {'email': data['email'],
-                'exp': data['exp'],
-                'nbf': data['nbf'] }
+    response = {
+        'email': data['email'],
+        'exp': data['exp'],
+        'nbf': data['nbf']
+    }
     return jsonify(**response)
 
 
@@ -109,6 +112,7 @@ def _get_jwt(user_data):
                'nbf': datetime.datetime.utcnow(),
                'email': user_data['email']}
     return jwt.encode(payload, JWT_SECRET, algorithm='HS256')
+
 
 if __name__ == '__main__':
     APP.run(host='127.0.0.1', port=8080, debug=True)

@@ -1,7 +1,6 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 
-
 Description: EKSWSV1
 
 
@@ -18,7 +17,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: Deploy-Flask-App-to-Kubernetes-Using-EKS
+    Default: Deploy-Your-Flask-App-to-Kubernetes-Using-EKS
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -41,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: khalido394
+    Default: manishbisht
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -57,7 +56,7 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: UdacityFlaskDeployCBKubectlRole
+    Default: UdacityFlaskDeployCBKubectlRol
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
